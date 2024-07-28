@@ -176,6 +176,7 @@ html {
   bottom: 0;
   padding: 0.5rem 1rem;
   text-align: center;
+  font-size: 0.8rem;
   background-color: var(--light-grey);
   color: var(--dark-slate-grey);
 }
@@ -313,5 +314,10 @@ html {
 
   .attribution a {
     color: var(--light-grey);
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--primary);
+    }
   }
 }
