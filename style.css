@@ -103,6 +103,20 @@ html {
   color: var(--charcoal-grey);
 }
 
+.subscription-form__text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.error-message {
+  display: none;
+  align-self: flex-end;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
 #email-input {
   padding: 1.3rem;
   border: 1px solid var(--grey);
@@ -235,20 +249,6 @@ html {
 
   .subscription-form {
     width: 100%;
-  }
-
-  .subscription-form__text {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .error-message {
-    display: none;
-    align-self: flex-end;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--primary);
   }
 
   .main-image {
