@@ -314,8 +314,7 @@ html {
       );
     }
 
-    &:hover::after,
-    &:focus::after {
+    &:hover::after {
       opacity: 1;
     }
 
@@ -337,8 +336,7 @@ html {
       transition: all 0.3s;
     }
 
-    &:hover::before,
-    &:focus::before {
+    &:hover::before {
       opacity: 1;
     }
   }
