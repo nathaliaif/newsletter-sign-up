@@ -287,15 +287,59 @@ html {
   }
 
   .dark-button {
+    position: relative;
     cursor: pointer;
-    transition: 0.3s;
+    z-index: 10;
 
-    &:hover {
+    .button-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 1;
+      border-radius: inherit;
+      transition: opacity 0.3s;
       background: linear-gradient(
         90deg,
         rgba(255, 88, 108, 1) 11%,
         rgba(254, 101, 69, 1) 94%
       );
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: -2;
+      inset: -5px;
+      height: 100%;
+      width: 100%;
+      transform: translate(10px, 8px);
+      filter: blur(10px);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 88, 108, 1) 11%,
+        rgba(254, 101, 69, 1) 94%
+      );
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
     }
   }
 
