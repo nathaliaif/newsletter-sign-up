@@ -40,6 +40,7 @@ html {
   row-gap: 1.5rem;
   padding: 2.5rem 1.5rem;
   color: var(--dark-slate-grey);
+  transition: 0.3s;
 }
 
 .title {
@@ -119,17 +120,32 @@ html {
 
 #email-input {
   padding: 1.3rem;
-  border: 1px solid var(--grey);
   border-radius: 7px;
+  font-size: 1rem;
 
   &:focus {
     border: 1px solid var(--primary);
   }
 }
 
-#email-input::placeholder {
-  font-size: 1rem;
-  color: var(--grey);
+.input--normal {
+  border: 1px solid var(--grey);
+  color: var(--dark-slate-grey);
+  /* background-color: blue; */
+
+  &::placeholder {
+    font-size: 1rem;
+    color: var(--grey);
+  }
+}
+
+.input--error {
+  background-color: rgb(from var(--primary) r g b / 30%);
+  border: 1px solid var(--primary);
+
+  &::placeholder {
+    color: rgb(from var(--dark-slate-grey) r g b / 50%);
+  }
 }
 
 .dark-button {
